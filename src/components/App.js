@@ -5,11 +5,11 @@ import NoteBody from './NoteBody';
 function App() {
 
   return (
-      <div>
+      <React.Fragment>
         <Header
         />
         <NoteBody/>
-      </div>
+      </React.Fragment>
   );
 }
 
