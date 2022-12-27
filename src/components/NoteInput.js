@@ -1,8 +1,10 @@
 import React from 'react';
+import autoBindReact from 'auto-bind/react';
 
 class NoteInput extends React.Component {
   constructor(props) {
     super(props);
+    autoBindReact(this);
 
     this.state = {
       title: '',
@@ -10,11 +12,6 @@ class NoteInput extends React.Component {
       createdAt: +new Date(),
       archived: false,
     };
-
-    this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
-    this.onContentChangeEventHandler =
-        this.onContentChangeEventHandler.bind(this);
-    this.onSubmitEventHandler = this.onSubmitEventHandler.bind(this);
   }
 
   onTitleChangeEventHandler(event) {

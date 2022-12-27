@@ -2,18 +2,16 @@ import React from 'react';
 import NoteInput from './NoteInput';
 import NotesList from './NotesList';
 import {getInitialData} from '../utils';
+import autoBindReact from 'auto-bind/react';
 
 class NoteBody extends React.Component {
   constructor(props) {
     super(props);
+    autoBindReact(this);
 
     this.state = {
       notes: getInitialData(),
     };
-
-    this.onDeleteHandler = this.onDeleteHandler.bind(this);
-    this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
-    this.toggleArchiveHandler = this.toggleArchiveHandler.bind(this);
   }
 
   onDeleteHandler(id) {
