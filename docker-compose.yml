@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  personal-notes:
+    container_name: personal-notes
+    image: fakhrylinux/personal-notes-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+      -

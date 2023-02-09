@@ -6,8 +6,7 @@ function App() {
 
   return (
       <React.Fragment>
-        <Header
-        />
+        <Header/>
         <NoteBody/>
       </React.Fragment>
   );

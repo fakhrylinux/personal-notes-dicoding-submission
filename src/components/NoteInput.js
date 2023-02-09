@@ -46,11 +46,13 @@ class NoteInput extends React.Component {
                 placeholder="Title"
                 value={this.state.name}
                 onChange={this.onTitleChangeEventHandler}
+                required
             />
             <textarea
                 className="note-input__body" placeholder="Note..."
                 value={this.state.body}
                 onChange={this.onContentChangeEventHandler}
+                required
             ></textarea>
             <button type="submit">Buat</button>
           </form>
